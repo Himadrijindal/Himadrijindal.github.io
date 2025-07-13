@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 35 25% 95%; /* Warm cream background */
+    --foreground: 25 45% 15%; /* Dark charcoal text */
+    --card: 0 0% 100%;
+    --card-foreground: 25 45% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 45% 15%;
+    --primary: 345 75% 35%; /* Japanese burgundy */
+    --primary-foreground: 35 25% 95%;
+    --secondary: 35 25% 90%; /* Light cream */
+    --secondary-foreground: 25 45% 15%;
+    --muted: 35 25% 90%;
+    --muted-foreground: 25 25% 45%;
+    --accent: 16 100% 50%; /* Japanese coral */
+    --accent-foreground: 35 25% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 35 20% 85%; /* Warm border */
+    --input: 35 20% 85%;
+    --ring: 345 75% 35%;
+    --radius: 0.5rem;
+    --chart-1: 345 75% 35%; /* Burgundy */
+    --chart-2: 16 100% 50%; /* Coral */
+    --chart-3: 35 35% 55%; /* Sand */
+    --chart-4: 25 45% 25%; /* Brown */
+    --chart-5: 25 45% 15%; /* Charcoal */
+  }
+
+  .dark {
+    --background: 25 45% 8%; /* Dark charcoal background */
+    --foreground: 35 25% 95%; /* Cream text */
+    --card: 25 45% 10%;
+    --card-foreground: 35 25% 95%;
+    --popover: 25 45% 10%;
+    --popover-foreground: 35 25% 95%;
+    --primary: 345 75% 45%; /* Lighter burgundy for dark mode */
+    --primary-foreground: 25 45% 8%;
+    --secondary: 25 35% 15%;
+    --secondary-foreground: 35 25% 95%;
+    --muted: 25 35% 15%;
+    --muted-foreground: 35 15% 65%;
+    --accent: 16 100% 60%; /* Brighter coral for dark mode */
+    --accent-foreground: 25 45% 8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 35 25% 95%;
+    --border: 25 35% 20%;
+    --input: 25 35% 20%;
+    --ring: 345 75% 45%;
+    --chart-1: 345 75% 45%;
+    --chart-2: 16 100% 60%;
+    --chart-3: 35 35% 65%;
+    --chart-4: 25 25% 75%;
+    --chart-5: 35 25% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  .font-japanese {
+    font-family: var(--font-noto-serif-jp), serif;
+  }
+}
+
+@layer utilities {
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  /* Japanese-inspired gradient backgrounds */
+  .gradient-japanese {
+    background: linear-gradient(135deg, #f5e6d3 0%, #d4b896 100%);
+  }
+
+  .gradient-japanese-dark {
+    background: linear-gradient(135deg, #2c1810 0%, #5c4529 100%);
+  }
+
+  /* Traditional Japanese accent colors */
+  .text-japanese-burgundy {
+    color: #8b1538;
+  }
+
+  .text-japanese-coral {
+    color: #ff4500;
+  }
+
+  .bg-japanese-burgundy {
+    background-color: #8b1538;
+  }
+
+  .bg-japanese-coral {
+    background-color: #ff4500;
+  }
+}
